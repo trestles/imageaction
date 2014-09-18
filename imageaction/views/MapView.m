@@ -31,7 +31,12 @@
 
 -(void)changeBackground
 {
-  [self setBackgroundColor:[UIColor blueColor]];
+  NSArray *colors=@[[UIColor blueColor], [UIColor grayColor], [UIColor greenColor]];
+
+  //[self setBackgroundColor:[UIColor blueColor]];
+  NSUInteger v=arc4random_uniform([colors count]);
+  [self setBackgroundColor:colors[v]];
+
 }
 
 /*

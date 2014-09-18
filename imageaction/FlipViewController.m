@@ -44,6 +44,7 @@
 }
 - (IBAction)flip:(id)sender {
   
+  
   [UIView transitionWithView:self.mainView duration:0.40 options:UIViewAnimationOptionTransitionFlipFromLeft animations:^{
     if(_showBeachView){
       [self.mainView addSubview:_mv];
