@@ -96,9 +96,11 @@
                          
                        }];
       
-      [UIView animateWithDuration:0.52 animations:^{
-        ov.smallView.backgroundColor=_currentColor;
-      }];
+      if(ov.svFactor < .8){
+        [UIView animateWithDuration:0.52 animations:^{
+          ov.smallView.backgroundColor=_currentColor;
+        }];
+      }
       
       
     }
