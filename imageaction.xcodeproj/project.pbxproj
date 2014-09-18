@@ -24,6 +24,9 @@
 		6B468F3119CA654800A62E6F /* OverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B468F3019CA654800A62E6F /* OverlayView.m */; };
 		6B468F3619CB764A00A62E6F /* maroon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B468F3419CB764A00A62E6F /* maroon.png */; };
 		6B468F3919CB878B00A62E6F /* purple.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B468F3819CB878B00A62E6F /* purple.png */; };
+		6B468F3C19CB90A700A62E6F /* FlipViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B468F3B19CB90A700A62E6F /* FlipViewController.m */; };
+		6B468F3F19CB93D100A62E6F /* BeachView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B468F3E19CB93D100A62E6F /* BeachView.m */; };
+		6B468F4319CB953400A62E6F /* MapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B468F4219CB953400A62E6F /* MapView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +64,12 @@
 		6B468F3219CB746F00A62E6F /* Utility.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Utility.h; sourceTree = "<group>"; };
 		6B468F3419CB764A00A62E6F /* maroon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = maroon.png; sourceTree = "<group>"; };
 		6B468F3819CB878B00A62E6F /* purple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = purple.png; sourceTree = "<group>"; };
+		6B468F3A19CB90A700A62E6F /* FlipViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlipViewController.h; sourceTree = "<group>"; };
+		6B468F3B19CB90A700A62E6F /* FlipViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlipViewController.m; sourceTree = "<group>"; };
+		6B468F3D19CB93D100A62E6F /* BeachView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BeachView.h; path = views/BeachView.h; sourceTree = "<group>"; };
+		6B468F3E19CB93D100A62E6F /* BeachView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BeachView.m; path = views/BeachView.m; sourceTree = "<group>"; };
+		6B468F4119CB953400A62E6F /* MapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapView.h; path = views/MapView.h; sourceTree = "<group>"; };
+		6B468F4219CB953400A62E6F /* MapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MapView.m; path = views/MapView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,10 +129,13 @@
 		6B468F0019CA651A00A62E6F /* imageaction */ = {
 			isa = PBXGroup;
 			children = (
+				6B468F4019CB93D900A62E6F /* views */,
 				6B468F3319CB762E00A62E6F /* images */,
 				6B468F0919CA651A00A62E6F /* AppDelegate.h */,
 				6B468F0A19CA651A00A62E6F /* AppDelegate.m */,
 				6B468F0C19CA651A00A62E6F /* Main.storyboard */,
+				6B468F3A19CB90A700A62E6F /* FlipViewController.h */,
+				6B468F3B19CB90A700A62E6F /* FlipViewController.m */,
 				6B468F0F19CA651A00A62E6F /* ViewController.h */,
 				6B468F1019CA651A00A62E6F /* ViewController.m */,
 				6B468F1219CA651A00A62E6F /* Images.xcassets */,
@@ -171,6 +183,17 @@
 				6B468F3819CB878B00A62E6F /* purple.png */,
 			);
 			name = images;
+			sourceTree = "<group>";
+		};
+		6B468F4019CB93D900A62E6F /* views */ = {
+			isa = PBXGroup;
+			children = (
+				6B468F3D19CB93D100A62E6F /* BeachView.h */,
+				6B468F3E19CB93D100A62E6F /* BeachView.m */,
+				6B468F4119CB953400A62E6F /* MapView.h */,
+				6B468F4219CB953400A62E6F /* MapView.m */,
+			);
+			name = views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,8 +297,11 @@
 			files = (
 				6B468F1119CA651A00A62E6F /* ViewController.m in Sources */,
 				6B468F3119CA654800A62E6F /* OverlayView.m in Sources */,
+				6B468F3F19CB93D100A62E6F /* BeachView.m in Sources */,
 				6B468F0B19CA651A00A62E6F /* AppDelegate.m in Sources */,
+				6B468F4319CB953400A62E6F /* MapView.m in Sources */,
 				6B468F0719CA651A00A62E6F /* main.m in Sources */,
+				6B468F3C19CB90A700A62E6F /* FlipViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
