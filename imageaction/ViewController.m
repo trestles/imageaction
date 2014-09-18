@@ -11,6 +11,7 @@
 
 #import "ViewController.h"
 #import "OverlayView.h"
+#import "Utility.h"
 
 @interface ViewController (){
   NSMutableArray *_viewArrays;
@@ -22,13 +23,27 @@
 
 @end
 
-@implementation ViewController
+@implementation ViewController{
+  UIImageView *purple;
+  UIImageView *maroon;
+  BOOL fromPurple;
+  BOOL _showSnail;
+}
 
 - (void)viewDidLoad
 {
   
   
     [super viewDidLoad];
+  
+  _showSnail=YES;
+  /*
+  maroon = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"maroon.png"]];
+  purple = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"purple.png"]];
+  */
+  
+  //[self.view ]
+  
   _numberOfPresses=0;
   _colorsArray=[[NSMutableArray alloc] init];
   
@@ -147,6 +162,39 @@
   }
 }
 
+- (IBAction)flip:(id)sender {
+  NSLog(@"about to flip");
+  self.navigationItem.rightBarButtonItem.enabled = NO;
+  
+  /*
+  UIView * toView = fromPurple ? maroon : purple;
+  UIView * fromView = fromPurple ? purple : maroon;
+  */
+  [UIView transitionWithView:self.iv duration:0.25f options:UIViewAnimationOptionTransitionFlipFromLeft animations:^{
+    if(_showSnail){
+      self.iv.image=[UIImage imageNamed:@"maroon.png"];
+      _showSnail=!_showSnail;
+    }else{
+      self.iv.image=[UIImage imageNamed:@"purple.png"];
+      _showSnail=!_showSnail;
+    }
+
+  } completion:^(BOOL finished) {
+    nil;
+  }];
+  /*
+  [UIView transitionWithView: self.iv
+                    duration: 1.0f
+                     options: UIViewAnimationOptionTransitionFlipFromLeft
+                  animations:^{
+                    //self.navigationItem.rightBarButtonItem.enabled = YES;
+                    fromPurple = !fromPurple;
+                    self.iv.image=[UIImage imageNamed:@"purple.png"];
+                    //CENTER_VIEW(self.view, toView);
+                  }];
+*/
+  
+}
 
 - (void)didReceiveMemoryWarning
 {

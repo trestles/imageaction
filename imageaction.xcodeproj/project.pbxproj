@@ -22,6 +22,8 @@
 		6B468F2419CA651A00A62E6F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6B468F2219CA651A00A62E6F /* InfoPlist.strings */; };
 		6B468F2619CA651A00A62E6F /* imageactionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B468F2519CA651A00A62E6F /* imageactionTests.m */; };
 		6B468F3119CA654800A62E6F /* OverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B468F3019CA654800A62E6F /* OverlayView.m */; };
+		6B468F3619CB764A00A62E6F /* maroon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B468F3419CB764A00A62E6F /* maroon.png */; };
+		6B468F3919CB878B00A62E6F /* purple.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B468F3819CB878B00A62E6F /* purple.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,9 @@
 		6B468F2519CA651A00A62E6F /* imageactionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = imageactionTests.m; sourceTree = "<group>"; };
 		6B468F2F19CA654700A62E6F /* OverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OverlayView.h; sourceTree = "<group>"; };
 		6B468F3019CA654800A62E6F /* OverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OverlayView.m; sourceTree = "<group>"; };
+		6B468F3219CB746F00A62E6F /* Utility.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Utility.h; sourceTree = "<group>"; };
+		6B468F3419CB764A00A62E6F /* maroon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = maroon.png; sourceTree = "<group>"; };
+		6B468F3819CB878B00A62E6F /* purple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = purple.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +120,7 @@
 		6B468F0019CA651A00A62E6F /* imageaction */ = {
 			isa = PBXGroup;
 			children = (
+				6B468F3319CB762E00A62E6F /* images */,
 				6B468F0919CA651A00A62E6F /* AppDelegate.h */,
 				6B468F0A19CA651A00A62E6F /* AppDelegate.m */,
 				6B468F0C19CA651A00A62E6F /* Main.storyboard */,
@@ -124,6 +130,7 @@
 				6B468F0119CA651A00A62E6F /* Supporting Files */,
 				6B468F2F19CA654700A62E6F /* OverlayView.h */,
 				6B468F3019CA654800A62E6F /* OverlayView.m */,
+				6B468F3219CB746F00A62E6F /* Utility.h */,
 			);
 			path = imageaction;
 			sourceTree = "<group>";
@@ -155,6 +162,15 @@
 				6B468F2219CA651A00A62E6F /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6B468F3319CB762E00A62E6F /* images */ = {
+			isa = PBXGroup;
+			children = (
+				6B468F3419CB764A00A62E6F /* maroon.png */,
+				6B468F3819CB878B00A62E6F /* purple.png */,
+			);
+			name = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,6 +250,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B468F1319CA651A00A62E6F /* Images.xcassets in Resources */,
+				6B468F3619CB764A00A62E6F /* maroon.png in Resources */,
+				6B468F3919CB878B00A62E6F /* purple.png in Resources */,
 				6B468F0519CA651A00A62E6F /* InfoPlist.strings in Resources */,
 				6B468F0E19CA651A00A62E6F /* Main.storyboard in Resources */,
 			);
@@ -462,6 +480,7 @@
 				6B468F2B19CA651A00A62E6F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6B468F2C19CA651A00A62E6F /* Build configuration list for PBXNativeTarget "imageactionTests" */ = {
 			isa = XCConfigurationList;
@@ -470,6 +489,7 @@
 				6B468F2E19CA651A00A62E6F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
