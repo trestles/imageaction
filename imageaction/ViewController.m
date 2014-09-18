@@ -96,9 +96,14 @@
                          
                        }];
       
-      if(ov.svFactor < .8){
+      if(ov.svFactor < .5){
         [UIView animateWithDuration:0.52 animations:^{
           ov.smallView.backgroundColor=_currentColor;
+        }];
+      }else{
+        NSLog(@"about to call transform");
+        [UIView animateWithDuration:0.50 animations:^{
+          ov.microView.transform = CGAffineTransformRotate(ov.microView.transform, 90 * M_PI / 360);
         }];
       }
       

@@ -11,6 +11,7 @@
 @interface OverlayView : UIView
 
 @property (nonatomic, strong) UIView *smallView;
+@property (nonatomic, strong) UIView *microView;
 @property (nonatomic, assign) CGFloat svFactor;
 
 -(void)animateSmallView;

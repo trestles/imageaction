@@ -29,6 +29,15 @@
   [self addSubview:self.smallView];
   
   
+  CGFloat smallerWidth=viewWidth/4;
+  self.microView=[[UIView alloc] initWithFrame:CGRectMake(smallerWidth, smallerWidth, smallerWidth, smallerWidth)];
+  [self.microView setBackgroundColor:[UIColor clearColor]];
+  self.microView.layer.borderWidth=0.5f;
+  self.microView.layer.borderColor=[UIColor blackColor].CGColor;
+  [self addSubview:self.microView];
+  self.microView.hidden=YES;
+  
+  
     return self;
 }
 
@@ -37,7 +46,7 @@
   CGFloat animVal=3.0f;
   self.svFactor=self.smallView.frame.size.width / self.frame.size.width;
   NSLog(@"factor %f about to animate the small view %f %f", self.svFactor, self.smallView.frame.size.width, self.smallView.frame.size.height);
-  if(self.svFactor < .82){
+  if(self.svFactor < .5){
   [UIView animateWithDuration:1.0
                    animations:^{
                      
@@ -45,6 +54,8 @@
                                                      self.smallView.frame.origin.y-animVal, self.smallView.frame.size.width + (2*animVal),
                                                      self.smallView.frame.size.height + (2*animVal));
                    }];
+  }else{
+    self.microView.hidden=NO;
   }
   
 }
