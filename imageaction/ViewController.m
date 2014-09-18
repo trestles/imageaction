@@ -7,6 +7,7 @@
 //
 
 #define ARC4RANDOM_MAX      0x100000000
+#define ADURATION .07
 
 #import "ViewController.h"
 #import "OverlayView.h"
@@ -62,25 +63,25 @@
     //NSLog(@"about to change colors");
     int j=0;
     for(NSMutableArray *tmpHoldingArray in _viewArrays){
-    for(OverlayView *ov in tmpHoldingArray){
-      [UIView animateWithDuration:0.25
-                            delay:(j*1.25)
+      for(OverlayView *ov in tmpHoldingArray){
+        [UIView animateWithDuration:0.25
+                            delay:(j*ADURATION)
                            options:UIViewAnimationOptionCurveEaseInOut
                        animations:^{
              double val=((double)arc4random() / ARC4RANDOM_MAX);
             ov.backgroundColor=[tmpColor colorWithAlphaComponent:val];
 
-      }
-       completion:^(BOOL finished) {
+        }
+         completion:^(BOOL finished) {
          
-      }];
-      /*
-      [UIView animateWithDuration:0.12 animations:^{
+        }];
+      
+      [UIView animateWithDuration:0.52 animations:^{
         ov.smallView.backgroundColor=tmpColor;
       }];
-       */
       
-      }
+      
+       }
     j++;
     }
   }else{
@@ -89,8 +90,8 @@
       for(int m=0; m<10; m++){
         NSLog(@"here is value: %i %i", k, m);
         OverlayView *ov=_viewArrays[m][k];
-        [UIView animateWithDuration:1.25
-                              delay:(k*0.25)
+        [UIView animateWithDuration:0.25
+                              delay:(k*ADURATION)
                             options:UIViewAnimationOptionCurveEaseInOut
                          animations:^{
                            double val=((double)arc4random() / ARC4RANDOM_MAX);

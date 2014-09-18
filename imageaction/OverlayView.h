@@ -10,6 +10,6 @@
 
 @interface OverlayView : UIView
 
-//@property (nonatomic, strong) UIView *smallView;
+@property (nonatomic, strong) UIView *smallView;
 
 @end

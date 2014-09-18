@@ -16,7 +16,7 @@
     if (self) {
         // Initialization code
     }
-  /*
+  
   self.smallView=[[UIView alloc] initWithFrame:CGRectMake(10.0f, 10.0f, 10.0f, 10.0f)];
   
   [self.smallView setBackgroundColor:[UIColor clearColor]];
@@ -26,15 +26,16 @@
   
   [self addSubview:self.smallView];
   
-  */
+  
     return self;
 }
 
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
+/*
 - (void)drawRect:(CGRect)rect
 {
     // Drawing code
 }
-
+*/
 @end
