@@ -16,6 +16,8 @@
   NSMutableArray *_viewArrays;
   NSMutableArray *_colorsArray;
   int _numberOfPresses;
+  UIColor *_currentColor;
+  int _boxesPerSide;
 }
 
 @end
@@ -36,12 +38,17 @@
   
   _viewArrays=[[NSMutableArray alloc] init];
     // lets create like
-  CGFloat boxSize=30.0f;
+  CGFloat width=300.0f;
+  //CGFloat boxSize=30.0f;
+  CGFloat boxSize=75.0f;
+
+  _boxesPerSide=width / boxSize;
+  NSLog(@"here is _boxesPerSide %i",_boxesPerSide);
   
-  for(int j=0; j<10; j++){
+  for(int j=0; j<_boxesPerSide; j++){
     NSMutableArray *tmpArray=[[NSMutableArray alloc] init];
     [_viewArrays addObject:tmpArray];
-    for(int i=0; i<10; i++){
+    for(int i=0; i<_boxesPerSide; i++){
       NSLog(@"here is %i", i);
       OverlayView *tmpView=[[OverlayView alloc] initWithFrame:CGRectMake(i*boxSize, j*boxSize, boxSize, boxSize)];
       double val=((double)arc4random() / ARC4RANDOM_MAX);
@@ -57,66 +64,79 @@
 }
 
 - (IBAction)changeColors:(id)sender {
-  UIColor *tmpColor=_colorsArray[arc4random_uniform(3)];
+  _currentColor=_colorsArray[arc4random_uniform(3)];
 
   if(_numberOfPresses%2){
     //NSLog(@"about to change colors");
-    int j=0;
-    for(NSMutableArray *tmpHoldingArray in _viewArrays){
-      for(OverlayView *ov in tmpHoldingArray){
-        [UIView animateWithDuration:0.25
-                            delay:(j*ADURATION)
-                           options:UIViewAnimationOptionCurveEaseInOut
-                       animations:^{
-             double val=((double)arc4random() / ARC4RANDOM_MAX);
-            ov.backgroundColor=[tmpColor colorWithAlphaComponent:val];
-
-        }
-         completion:^(BOOL finished) {
-         
-        }];
-      
-      [UIView animateWithDuration:0.52 animations:^{
-        ov.smallView.backgroundColor=tmpColor;
-      }];
-      
-      
-       }
-    j++;
-    }
+    [self animateFromTop];
   }else{
     NSLog(@"next time :)");
-    for(int k=0; k<10; k++){
-      for(int m=0; m<10; m++){
-        NSLog(@"here is value: %i %i", k, m);
-        OverlayView *ov=_viewArrays[m][k];
-        [UIView animateWithDuration:0.25
-                              delay:(k*ADURATION)
-                            options:UIViewAnimationOptionCurveEaseInOut
-                         animations:^{
-                           double val=((double)arc4random() / ARC4RANDOM_MAX);
-                           //ov.backgroundColor=[[UIColor orangeColor] colorWithAlphaComponent:val];
-                           ov.backgroundColor=[tmpColor colorWithAlphaComponent:val];
-                           
-                         }
-                         completion:^(BOOL finished) {
-                           
-                         }
-         ];
-        /*
-        [UIView animateWithDuration:0.12 animations:^{
-          ov.smallView.backgroundColor=tmpColor;
-        }];
-        */
-        
-        //m++;
-      }
-      //k++;
-    }
+    [self animateFromLeft];
   }
   
   _numberOfPresses++;
   NSLog(@"here is number of presses: %i", _numberOfPresses);
+}
+
+-(void)animateFromTop
+{
+  
+  int j=0;
+  for(NSMutableArray *tmpHoldingArray in _viewArrays){
+    for(OverlayView *ov in tmpHoldingArray){
+      [UIView animateWithDuration:0.25
+                            delay:(j*ADURATION)
+                          options:UIViewAnimationOptionCurveEaseInOut
+                       animations:^{
+                         double val=((double)arc4random() / ARC4RANDOM_MAX);
+                         ov.backgroundColor=[_currentColor colorWithAlphaComponent:val];
+                         
+                       }
+                       completion:^(BOOL finished) {
+                         
+                       }];
+      
+      [UIView animateWithDuration:0.52 animations:^{
+        ov.smallView.backgroundColor=_currentColor;
+      }];
+      
+      
+    }
+    j++;
+  }
+}
+
+
+-(void)animateFromLeft
+{
+  for(int k=0; k<_boxesPerSide; k++){
+    for(int m=0; m<_boxesPerSide; m++){
+      NSLog(@"here is value: %i %i", k, m);
+      OverlayView *ov=_viewArrays[m][k];
+      [UIView animateWithDuration:0.25
+                            delay:(k*ADURATION)
+                          options:UIViewAnimationOptionCurveEaseInOut
+                       animations:^{
+                         double val=((double)arc4random() / ARC4RANDOM_MAX);
+                         //ov.backgroundColor=[[UIColor orangeColor] colorWithAlphaComponent:val];
+                         ov.backgroundColor=[_currentColor colorWithAlphaComponent:val];
+                         
+                       }
+                       completion:^(BOOL finished) {
+                         
+                       }
+       ];
+      
+       [UIView animateWithDuration:0.12 animations:^{
+         ov.smallView.backgroundColor=[UIColor whiteColor];
+         [ov animateSmallView];
+       }];
+      
+      
+      //m++;
+    }
+    //k++;
+  }
 }
 
 

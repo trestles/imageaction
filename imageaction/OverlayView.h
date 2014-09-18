@@ -12,4 +12,6 @@
 
 @property (nonatomic, strong) UIView *smallView;
 
+-(void)animateSmallView;
+
 @end
