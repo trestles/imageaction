@@ -164,8 +164,7 @@
 
 - (IBAction)flip:(id)sender {
   NSLog(@"about to flip");
-  self.navigationItem.rightBarButtonItem.enabled = NO;
-  
+  //self.navigationItem.rightBarButtonItem.enabled = NO;
   /*
   UIView * toView = fromPurple ? maroon : purple;
   UIView * fromView = fromPurple ? purple : maroon;
