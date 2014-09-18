@@ -127,6 +127,7 @@
                        }
        ];
       
+      
        [UIView animateWithDuration:0.12 animations:^{
          ov.smallView.backgroundColor=[UIColor whiteColor];
          [ov animateSmallView];

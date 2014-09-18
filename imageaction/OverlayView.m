@@ -34,8 +34,10 @@
 
 -(void)animateSmallView
 {
-  NSLog(@"about to animate the small view %f %f", self.smallView.frame.size.width, self.smallView.frame.size.height);
   CGFloat animVal=3.0f;
+  double factor=self.smallView.frame.size.width / self.frame.size.width;
+  NSLog(@"factor %f about to animate the small view %f %f", factor, self.smallView.frame.size.width, self.smallView.frame.size.height);
+  if(factor < .82){
   [UIView animateWithDuration:1.0
                    animations:^{
                      
@@ -43,6 +45,7 @@
                                                      self.smallView.frame.origin.y-animVal, self.smallView.frame.size.width + (2*animVal),
                                                      self.smallView.frame.size.height + (2*animVal));
                    }];
+  }
   
 }
 
