@@ -17,7 +17,21 @@
         // Initialization code
     }
     self.backgroundColor=[UIColor orangeColor];
+    UILabel *bgLabel=[[UILabel alloc] initWithFrame:CGRectMake(0.0f, 0.0f, 160.0f, 30.0f)];
+    bgLabel.text=@"change background";
+  bgLabel.userInteractionEnabled=YES;
+  //make them touchable
+  UITapGestureRecognizer *letterTapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(changeBackground)];
+  //letterTapRecognizer.numberOfTapsRequired = 1;
+  [bgLabel addGestureRecognizer:letterTapRecognizer];
+  
+    [self addSubview:bgLabel];
     return self;
+}
+
+-(void)changeBackground
+{
+  [self setBackgroundColor:[UIColor blueColor]];
 }
 
 /*

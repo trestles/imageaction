@@ -13,6 +13,7 @@
 @interface FlipViewController (){
   BeachView *_bv;
   MapView *_mv;
+  BOOL _showBeachView;
 }
 
 @end
@@ -34,6 +35,7 @@
   // Do any additional setup after loading the view.
   _bv=[[BeachView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, 200.0f, 200.0f)];
   _mv=[[MapView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, 200.0f, 200.0f)];
+  _showBeachView=YES;
 
   [self.mainView addSubview:_bv];
 }
@@ -42,8 +44,13 @@
 }
 - (IBAction)flip:(id)sender {
   
-  [UIView transitionWithView:self.mainView duration:2.0 options:UIViewAnimationOptionTransitionFlipFromLeft animations:^{
-    [self.mainView addSubview:_mv];
+  [UIView transitionWithView:self.mainView duration:0.40 options:UIViewAnimationOptionTransitionFlipFromLeft animations:^{
+    if(_showBeachView){
+      [self.mainView addSubview:_mv];
+    }else{
+      [self.mainView addSubview:_bv];
+    }
+    _showBeachView=!_showBeachView;
   } completion:nil
   ];
 }
