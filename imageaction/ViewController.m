@@ -55,7 +55,7 @@
     // lets create like
   CGFloat width=300.0f;
   //CGFloat boxSize=30.0f;
-  CGFloat boxSize=75.0f;
+  CGFloat boxSize=30.0f;
 
   _boxesPerSide=width / boxSize;
   NSLog(@"here is _boxesPerSide %i",_boxesPerSide);
