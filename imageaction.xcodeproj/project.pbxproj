@@ -29,6 +29,7 @@
 		6B468F4319CB953400A62E6F /* MapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B468F4219CB953400A62E6F /* MapView.m */; };
 		6BDDE62619D0C94200C06A8D /* DrawingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BDDE62519D0C94200C06A8D /* DrawingViewController.m */; };
 		6BDDE62919D1EFBC00C06A8D /* CircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BDDE62819D1EFBC00C06A8D /* CircleView.m */; };
+		6BDDE62C19D1F7D800C06A8D /* AnimateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BDDE62B19D1F7D800C06A8D /* AnimateViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,8 @@
 		6BDDE62519D0C94200C06A8D /* DrawingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DrawingViewController.m; path = controllers/DrawingViewController.m; sourceTree = "<group>"; };
 		6BDDE62719D1EFBC00C06A8D /* CircleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CircleView.h; path = views/CircleView.h; sourceTree = "<group>"; };
 		6BDDE62819D1EFBC00C06A8D /* CircleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CircleView.m; path = views/CircleView.m; sourceTree = "<group>"; };
+		6BDDE62A19D1F7D800C06A8D /* AnimateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AnimateViewController.h; path = controllers/AnimateViewController.h; sourceTree = "<group>"; };
+		6BDDE62B19D1F7D800C06A8D /* AnimateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AnimateViewController.m; path = controllers/AnimateViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,8 +150,6 @@
 				6B468F1019CA651A00A62E6F /* ViewController.m */,
 				6B468F1219CA651A00A62E6F /* Images.xcassets */,
 				6B468F0119CA651A00A62E6F /* Supporting Files */,
-				6B468F2F19CA654700A62E6F /* OverlayView.h */,
-				6B468F3019CA654800A62E6F /* OverlayView.m */,
 				6B468F3219CB746F00A62E6F /* Utility.h */,
 			);
 			path = imageaction;
@@ -195,6 +196,8 @@
 		6B468F4019CB93D900A62E6F /* views */ = {
 			isa = PBXGroup;
 			children = (
+				6B468F2F19CA654700A62E6F /* OverlayView.h */,
+				6B468F3019CA654800A62E6F /* OverlayView.m */,
 				6B468F3D19CB93D100A62E6F /* BeachView.h */,
 				6B468F3E19CB93D100A62E6F /* BeachView.m */,
 				6B468F4119CB953400A62E6F /* MapView.h */,
@@ -208,6 +211,8 @@
 		6BDDE62319D0C89800C06A8D /* controllers */ = {
 			isa = PBXGroup;
 			children = (
+				6BDDE62A19D1F7D800C06A8D /* AnimateViewController.h */,
+				6BDDE62B19D1F7D800C06A8D /* AnimateViewController.m */,
 				6BDDE62419D0C94200C06A8D /* DrawingViewController.h */,
 				6BDDE62519D0C94200C06A8D /* DrawingViewController.m */,
 			);
@@ -315,6 +320,7 @@
 			files = (
 				6B468F1119CA651A00A62E6F /* ViewController.m in Sources */,
 				6B468F3119CA654800A62E6F /* OverlayView.m in Sources */,
+				6BDDE62C19D1F7D800C06A8D /* AnimateViewController.m in Sources */,
 				6BDDE62919D1EFBC00C06A8D /* CircleView.m in Sources */,
 				6B468F3F19CB93D100A62E6F /* BeachView.m in Sources */,
 				6B468F0B19CA651A00A62E6F /* AppDelegate.m in Sources */,

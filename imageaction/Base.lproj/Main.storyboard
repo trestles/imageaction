@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9BV-tf-VNx">
-                                <rect key="frame" x="52" y="333" width="51" height="30"/>
+                                <rect key="frame" x="52" y="321" width="51" height="30"/>
                                 <state key="normal" title="change">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -39,7 +39,7 @@
                                 <rect key="frame" x="169" y="338" width="100" height="43"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="21c-H4-hKh">
-                                <rect key="frame" x="54" y="404" width="99" height="30"/>
+                                <rect key="frame" x="54" y="364" width="99" height="30"/>
                                 <state key="normal" title="new-controller">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -48,12 +48,21 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wLW-BI-zKJ">
-                                <rect key="frame" x="62" y="452" width="55" height="30"/>
+                                <rect key="frame" x="57" y="407" width="55" height="30"/>
                                 <state key="normal" title="drawing">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <segue destination="nIe-na-2Wx" kind="modal" id="ipj-fU-LdX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1oH-XR-bhr">
+                                <rect key="frame" x="61" y="450" width="67" height="30"/>
+                                <state key="normal" title="animation">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="99B-E1-OrD" kind="modal" id="WZG-sR-biL"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -65,6 +74,35 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--Animate View Controller-->
+        <scene sceneID="gGj-55-Jqs">
+            <objects>
+                <viewController id="99B-E1-OrD" customClass="AnimateViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3xc-4o-F5Z"/>
+                        <viewControllerLayoutGuide type="bottom" id="inj-iZ-WBf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7pN-hq-5lp">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LQE-BG-KGw">
+                                <rect key="frame" x="36" y="34" width="52" height="30"/>
+                                <state key="normal" title="dismiss">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="dismiss:" destination="99B-E1-OrD" eventType="touchUpInside" id="elW-eP-C4N"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.84264259909999994" blue="0.38073024719999998" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PaS-iA-MwJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="663" y="-535"/>
         </scene>
         <!--Drawing View Controller-->
         <scene sceneID="yDk-gb-r2X">
@@ -93,7 +131,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ebW-wU-TbB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="695" y="-350"/>
+            <point key="canvasLocation" x="1311" y="186"/>
         </scene>
         <!--Flip View Controller-->
         <scene sceneID="8Ta-ce-w2F">
@@ -138,7 +176,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bzK-09-Nml" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="709" y="354"/>
+            <point key="canvasLocation" x="1245" y="906"/>
         </scene>
     </scenes>
     <resources>
