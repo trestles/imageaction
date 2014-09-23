@@ -27,6 +27,8 @@
 		6B468F3C19CB90A700A62E6F /* FlipViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B468F3B19CB90A700A62E6F /* FlipViewController.m */; };
 		6B468F3F19CB93D100A62E6F /* BeachView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B468F3E19CB93D100A62E6F /* BeachView.m */; };
 		6B468F4319CB953400A62E6F /* MapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B468F4219CB953400A62E6F /* MapView.m */; };
+		6BDDE62619D0C94200C06A8D /* DrawingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BDDE62519D0C94200C06A8D /* DrawingViewController.m */; };
+		6BDDE62919D1EFBC00C06A8D /* CircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BDDE62819D1EFBC00C06A8D /* CircleView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +72,10 @@
 		6B468F3E19CB93D100A62E6F /* BeachView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BeachView.m; path = views/BeachView.m; sourceTree = "<group>"; };
 		6B468F4119CB953400A62E6F /* MapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapView.h; path = views/MapView.h; sourceTree = "<group>"; };
 		6B468F4219CB953400A62E6F /* MapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MapView.m; path = views/MapView.m; sourceTree = "<group>"; };
+		6BDDE62419D0C94200C06A8D /* DrawingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DrawingViewController.h; path = controllers/DrawingViewController.h; sourceTree = "<group>"; };
+		6BDDE62519D0C94200C06A8D /* DrawingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DrawingViewController.m; path = controllers/DrawingViewController.m; sourceTree = "<group>"; };
+		6BDDE62719D1EFBC00C06A8D /* CircleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CircleView.h; path = views/CircleView.h; sourceTree = "<group>"; };
+		6BDDE62819D1EFBC00C06A8D /* CircleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CircleView.m; path = views/CircleView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +135,7 @@
 		6B468F0019CA651A00A62E6F /* imageaction */ = {
 			isa = PBXGroup;
 			children = (
+				6BDDE62319D0C89800C06A8D /* controllers */,
 				6B468F4019CB93D900A62E6F /* views */,
 				6B468F3319CB762E00A62E6F /* images */,
 				6B468F0919CA651A00A62E6F /* AppDelegate.h */,
@@ -192,8 +199,19 @@
 				6B468F3E19CB93D100A62E6F /* BeachView.m */,
 				6B468F4119CB953400A62E6F /* MapView.h */,
 				6B468F4219CB953400A62E6F /* MapView.m */,
+				6BDDE62719D1EFBC00C06A8D /* CircleView.h */,
+				6BDDE62819D1EFBC00C06A8D /* CircleView.m */,
 			);
 			name = views;
+			sourceTree = "<group>";
+		};
+		6BDDE62319D0C89800C06A8D /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				6BDDE62419D0C94200C06A8D /* DrawingViewController.h */,
+				6BDDE62519D0C94200C06A8D /* DrawingViewController.m */,
+			);
+			name = controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -297,9 +315,11 @@
 			files = (
 				6B468F1119CA651A00A62E6F /* ViewController.m in Sources */,
 				6B468F3119CA654800A62E6F /* OverlayView.m in Sources */,
+				6BDDE62919D1EFBC00C06A8D /* CircleView.m in Sources */,
 				6B468F3F19CB93D100A62E6F /* BeachView.m in Sources */,
 				6B468F0B19CA651A00A62E6F /* AppDelegate.m in Sources */,
 				6B468F4319CB953400A62E6F /* MapView.m in Sources */,
+				6BDDE62619D0C94200C06A8D /* DrawingViewController.m in Sources */,
 				6B468F0719CA651A00A62E6F /* main.m in Sources */,
 				6B468F3C19CB90A700A62E6F /* FlipViewController.m in Sources */,
 			);

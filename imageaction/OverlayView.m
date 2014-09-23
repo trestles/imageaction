@@ -7,6 +7,7 @@
 //
 
 #import "OverlayView.h"
+#import "Utility.h"
 
 @implementation OverlayView
 
@@ -37,6 +38,16 @@
   [self addSubview:self.microView];
   self.microView.hidden=YES;
   
+  /*
+  CAShapeLayer *shapeView = [[CAShapeLayer alloc] init];
+  //And set its path:
+  
+  [shapeView setPath:[self createPath].CGPath];
+  //Finally add it:
+  
+  [[self.view layer] addSublayer:shapeView];
+*/
+  
   
     return self;
 }
@@ -60,14 +71,66 @@
   
 }
 
-/*
+
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
 - (void)drawRect:(CGRect)rect
 {
-    // Drawing code
+  // Create an oval shape to draw.
+  UIBezierPath *aPath = [UIBezierPath bezierPathWithOvalInRect:
+                         CGRectMake(40, 40, 10, 10)];
+  
+  // Set the render colors.
+  [[UIColor blackColor] setStroke];
+  [[UIColor clearColor] setFill];
+  
+  CGContextRef aRef = UIGraphicsGetCurrentContext();
+  
+  // If you have content to draw after the shape,
+  // save the current state before changing the transform.
+  //CGContextSaveGState(aRef);
+  
+  // Adjust the view's origin temporarily. The oval is
+  // now drawn relative to the new origin point.
+  CGContextTranslateCTM(aRef, 50, 50);
+  
+  // Adjust the drawing options as needed.
+  aPath.lineWidth = 1;
+  
+  // Fill the path before stroking it so that the fill
+  // color does not obscure the stroked line.
+  [aPath fill];
+  [aPath stroke];
+  
+  // Drawing code
+  /*
+    UIBezierPath *aPath = [UIBezierPath bezierPathWithArcCenter:CGPointMake(3,
+                                                                            3)
+                                                         radius:15
+                                                     startAngle:0
+                                                       endAngle:DEGREES_TO_RADIANS(135)
+                                                      clockwise:YES];
+  
+  UIGraphicsBeginImageContext(CGSizeMake(275, 300));
+  
+  //this gets the graphic context
+  CGContextRef context = UIGraphicsGetCurrentContext();
+  
+  //you can stroke and/or fill
+  CGContextSetStrokeColorWithColor(context, [UIColor blueColor].CGColor);
+  CGContextSetFillColorWithColor(context, [UIColor lightGrayColor].CGColor);
+  [aPath fill];
+  [aPath stroke];
+  
+  //now get the image from the context
+  UIImage *bezierImage = UIGraphicsGetImageFromCurrentImageContext();
+  
+  UIGraphicsEndImageContext();
+  */
+  
+
+    
   
 
 }
- */
 @end

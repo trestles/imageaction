@@ -9,9 +9,11 @@
 #define ARC4RANDOM_MAX      0x100000000
 #define ADURATION .07
 
+
 #import "ViewController.h"
 #import "OverlayView.h"
 #import "Utility.h"
+
 
 @interface ViewController (){
   NSMutableArray *_viewArrays;
@@ -55,7 +57,7 @@
     // lets create like
   CGFloat width=300.0f;
   //CGFloat boxSize=30.0f;
-  CGFloat boxSize=30.0f;
+  CGFloat boxSize=150.0f;
 
   _boxesPerSide=width / boxSize;
   NSLog(@"here is _boxesPerSide %i",_boxesPerSide);
@@ -75,6 +77,35 @@
       [tmpArray addObject:tmpView];
     }
   }
+  
+  //UIBezierPath *aPath = [UIBezierPath bezierPath];
+  
+  UIBezierPath *aPath = [UIBezierPath bezierPathWithOvalInRect:
+                         CGRectMake(300, 300, 10, 10)];
+  
+  // Set the render colors.
+  [[UIColor blackColor] setStroke];
+  [[UIColor clearColor] setFill];
+  
+  CGContextRef aRef = UIGraphicsGetCurrentContext();
+  
+  // If you have content to draw after the shape,
+  // save the current state before changing the transform.
+  //CGContextSaveGState(aRef);
+  
+  // Adjust the view's origin temporarily. The oval is
+  // now drawn relative to the new origin point.
+  CGContextTranslateCTM(aRef, 50, 50);
+  
+  // Adjust the drawing options as needed.
+  aPath.lineWidth = 1;
+  
+  // Fill the path before stroking it so that the fill
+  // color does not obscure the stroked line.
+  [aPath fill];
+  [aPath stroke];
+  
+  
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -194,6 +225,7 @@
 */
   
 }
+
 
 - (void)didReceiveMemoryWarning
 {
