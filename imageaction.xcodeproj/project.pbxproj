@@ -30,6 +30,18 @@
 		6BDDE62619D0C94200C06A8D /* DrawingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BDDE62519D0C94200C06A8D /* DrawingViewController.m */; };
 		6BDDE62919D1EFBC00C06A8D /* CircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BDDE62819D1EFBC00C06A8D /* CircleView.m */; };
 		6BDDE62C19D1F7D800C06A8D /* AnimateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BDDE62B19D1F7D800C06A8D /* AnimateViewController.m */; };
+		6BDDE63A19D1F9EA00C06A8D /* clock_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BDDE62E19D1F9EA00C06A8D /* clock_background.png */; };
+		6BDDE63B19D1F9EA00C06A8D /* clock_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BDDE62F19D1F9EA00C06A8D /* clock_background@2x.png */; };
+		6BDDE63C19D1F9EA00C06A8D /* hoursHand.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BDDE63019D1F9EA00C06A8D /* hoursHand.png */; };
+		6BDDE63D19D1F9EA00C06A8D /* hoursHand@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BDDE63119D1F9EA00C06A8D /* hoursHand@2x.png */; };
+		6BDDE63E19D1F9EA00C06A8D /* minutesHand.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BDDE63219D1F9EA00C06A8D /* minutesHand.png */; };
+		6BDDE63F19D1F9EA00C06A8D /* minutesHand@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BDDE63319D1F9EA00C06A8D /* minutesHand@2x.png */; };
+		6BDDE64019D1F9EA00C06A8D /* pendulum.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BDDE63419D1F9EA00C06A8D /* pendulum.png */; };
+		6BDDE64119D1F9EA00C06A8D /* pendulum@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BDDE63519D1F9EA00C06A8D /* pendulum@2x.png */; };
+		6BDDE64219D1F9EA00C06A8D /* secondsHand.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BDDE63619D1F9EA00C06A8D /* secondsHand.png */; };
+		6BDDE64319D1F9EA00C06A8D /* secondsHand@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BDDE63719D1F9EA00C06A8D /* secondsHand@2x.png */; };
+		6BDDE64419D1F9EA00C06A8D /* woodpattern.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BDDE63819D1F9EA00C06A8D /* woodpattern.png */; };
+		6BDDE64519D1F9EA00C06A8D /* woodpattern@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BDDE63919D1F9EA00C06A8D /* woodpattern@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +91,18 @@
 		6BDDE62819D1EFBC00C06A8D /* CircleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CircleView.m; path = views/CircleView.m; sourceTree = "<group>"; };
 		6BDDE62A19D1F7D800C06A8D /* AnimateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AnimateViewController.h; path = controllers/AnimateViewController.h; sourceTree = "<group>"; };
 		6BDDE62B19D1F7D800C06A8D /* AnimateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AnimateViewController.m; path = controllers/AnimateViewController.m; sourceTree = "<group>"; };
+		6BDDE62E19D1F9EA00C06A8D /* clock_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clock_background.png; sourceTree = "<group>"; };
+		6BDDE62F19D1F9EA00C06A8D /* clock_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clock_background@2x.png"; sourceTree = "<group>"; };
+		6BDDE63019D1F9EA00C06A8D /* hoursHand.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hoursHand.png; sourceTree = "<group>"; };
+		6BDDE63119D1F9EA00C06A8D /* hoursHand@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hoursHand@2x.png"; sourceTree = "<group>"; };
+		6BDDE63219D1F9EA00C06A8D /* minutesHand.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = minutesHand.png; sourceTree = "<group>"; };
+		6BDDE63319D1F9EA00C06A8D /* minutesHand@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "minutesHand@2x.png"; sourceTree = "<group>"; };
+		6BDDE63419D1F9EA00C06A8D /* pendulum.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pendulum.png; sourceTree = "<group>"; };
+		6BDDE63519D1F9EA00C06A8D /* pendulum@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pendulum@2x.png"; sourceTree = "<group>"; };
+		6BDDE63619D1F9EA00C06A8D /* secondsHand.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = secondsHand.png; sourceTree = "<group>"; };
+		6BDDE63719D1F9EA00C06A8D /* secondsHand@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "secondsHand@2x.png"; sourceTree = "<group>"; };
+		6BDDE63819D1F9EA00C06A8D /* woodpattern.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = woodpattern.png; sourceTree = "<group>"; };
+		6BDDE63919D1F9EA00C06A8D /* woodpattern@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "woodpattern@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +162,7 @@
 		6B468F0019CA651A00A62E6F /* imageaction */ = {
 			isa = PBXGroup;
 			children = (
+				6BDDE62D19D1F9AE00C06A8D /* animaton-images */,
 				6BDDE62319D0C89800C06A8D /* controllers */,
 				6B468F4019CB93D900A62E6F /* views */,
 				6B468F3319CB762E00A62E6F /* images */,
@@ -219,6 +244,25 @@
 			name = controllers;
 			sourceTree = "<group>";
 		};
+		6BDDE62D19D1F9AE00C06A8D /* animaton-images */ = {
+			isa = PBXGroup;
+			children = (
+				6BDDE62E19D1F9EA00C06A8D /* clock_background.png */,
+				6BDDE62F19D1F9EA00C06A8D /* clock_background@2x.png */,
+				6BDDE63019D1F9EA00C06A8D /* hoursHand.png */,
+				6BDDE63119D1F9EA00C06A8D /* hoursHand@2x.png */,
+				6BDDE63219D1F9EA00C06A8D /* minutesHand.png */,
+				6BDDE63319D1F9EA00C06A8D /* minutesHand@2x.png */,
+				6BDDE63419D1F9EA00C06A8D /* pendulum.png */,
+				6BDDE63519D1F9EA00C06A8D /* pendulum@2x.png */,
+				6BDDE63619D1F9EA00C06A8D /* secondsHand.png */,
+				6BDDE63719D1F9EA00C06A8D /* secondsHand@2x.png */,
+				6BDDE63819D1F9EA00C06A8D /* woodpattern.png */,
+				6BDDE63919D1F9EA00C06A8D /* woodpattern@2x.png */,
+			);
+			name = "animaton-images";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -296,9 +340,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B468F1319CA651A00A62E6F /* Images.xcassets in Resources */,
+				6BDDE64519D1F9EA00C06A8D /* woodpattern@2x.png in Resources */,
+				6BDDE63B19D1F9EA00C06A8D /* clock_background@2x.png in Resources */,
 				6B468F3619CB764A00A62E6F /* maroon.png in Resources */,
+				6BDDE63A19D1F9EA00C06A8D /* clock_background.png in Resources */,
+				6BDDE63E19D1F9EA00C06A8D /* minutesHand.png in Resources */,
+				6BDDE63F19D1F9EA00C06A8D /* minutesHand@2x.png in Resources */,
+				6BDDE63C19D1F9EA00C06A8D /* hoursHand.png in Resources */,
+				6BDDE64319D1F9EA00C06A8D /* secondsHand@2x.png in Resources */,
 				6B468F3919CB878B00A62E6F /* purple.png in Resources */,
+				6BDDE64419D1F9EA00C06A8D /* woodpattern.png in Resources */,
 				6B468F0519CA651A00A62E6F /* InfoPlist.strings in Resources */,
+				6BDDE64019D1F9EA00C06A8D /* pendulum.png in Resources */,
+				6BDDE64119D1F9EA00C06A8D /* pendulum@2x.png in Resources */,
+				6BDDE63D19D1F9EA00C06A8D /* hoursHand@2x.png in Resources */,
+				6BDDE64219D1F9EA00C06A8D /* secondsHand.png in Resources */,
 				6B468F0E19CA651A00A62E6F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
