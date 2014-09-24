@@ -51,7 +51,7 @@ IBOutlet UIView *pendulum;
   
   [self moveHand: self.hoursHand toAngle:([components hour] % 12) * 360.0f / 12.0f];
   [self moveHand: self.minutesHand toAngle:[components minute] * 360.0f / 12.0f];
-  
+  [self moveHand: self.secondsHand toAngle:[components second] * 360.0f / 60.0f];
   
   //[self moveHand: self.hoursHand ]; //]toAngle:([components hour] % 12) * 360.0f / 12.0f];
   
@@ -59,10 +59,34 @@ IBOutlet UIView *pendulum;
 
 }
 
+-(void)oscillatePendulum
+{
+  [[self.pendulum layer] setAnchorPoint:CGPointMake(0.5f, 0.0f)];
+  [[self.pendulum layer] setPosition:CGPointMake(165.0f, 155.0f)];
+  CAKeyframeAnimation *animation=[CAKeyframeAnimation animationWithKeyPath:@"transform.rotation.z"];
+  animation.duration=1.5f;
+  animation.repeatCount=INT64_MAX;
+  animation.values=@[@(0.0f * M_PI / 180.0f), @(15.0f * M_PI / 180.0f),
+                     @(0.0f * M_PI / 180.0f), @(-15.0f * M_PI / 180.0f), @(0.0f  * M_PI / 180.0f)];
+  animation.keyTimes=@[@(0.0f), @(0.26f),@(0.50f), @(0.74),@(1.0f)];
+  
+  animation.timingFunctions=@[
+    [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut],
+    [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn],
+    [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut],
+    [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn],
+    ];
+  [[self.pendulum layer] addAnimation: animation forKey:nil];
+  
+  
+}
+
 -(void)didMoveToWindow
 {
 //  [NSTimer scheduledTimerWithTimeInterval:1.0 invocation:<#(NSInvocation *)#> repeats:YES];
   [NSTimer scheduledTimerWithTimeInterval:2.0f target:self selector:@selector(moveHandstoLocalTime) userInfo:nil repeats:YES];
+  
+  [self oscillatePendulum];
 }
 
 
