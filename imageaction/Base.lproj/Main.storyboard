@@ -88,7 +88,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LQE-BG-KGw">
-                                <rect key="frame" x="36" y="34" width="52" height="30"/>
+                                <rect key="frame" x="32" y="0.0" width="52" height="30"/>
                                 <state key="normal" title="dismiss">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -96,17 +96,43 @@
                                     <action selector="dismiss:" destination="99B-E1-OrD" eventType="touchUpInside" id="elW-eP-C4N"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="64e-ug-cwt">
-                                <rect key="frame" x="65" y="93" width="217" height="210"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="64e-ug-cwt" customClass="AnalogClockView">
+                                <rect key="frame" x="10" y="38" width="300" height="520"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="clock_background.png" translatesAutoresizingMaskIntoConstraints="NO" id="TNV-lX-Rdd">
+                                        <rect key="frame" x="0.0" y="8" width="320" height="334"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hoursHand.png" translatesAutoresizingMaskIntoConstraints="NO" id="zhq-gE-JBa">
+                                        <rect key="frame" x="148" y="27" width="25" height="140"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="secondsHand.png" translatesAutoresizingMaskIntoConstraints="NO" id="JjT-fz-OMy">
+                                        <rect key="frame" x="146" y="14" width="25" height="140"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="minutesHand.png" translatesAutoresizingMaskIntoConstraints="NO" id="GZe-yD-X5i">
+                                        <rect key="frame" x="146" y="28" width="25" height="140"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pendulum.png" translatesAutoresizingMaskIntoConstraints="NO" id="hzi-Wt-8L5">
+                                        <rect key="frame" x="110" y="164" width="101" height="363"/>
+                                    </imageView>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="hoursHand" destination="zhq-gE-JBa" id="hYD-PZ-GDK"/>
+                                    <outlet property="minutesHand" destination="GZe-yD-X5i" id="xp1-Xm-8wM"/>
+                                    <outlet property="pendulum" destination="hzi-Wt-8L5" id="zDs-d2-Hyp"/>
+                                    <outlet property="secondsHand" destination="JjT-fz-OMy" id="a42-U1-wua"/>
+                                </connections>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.84264259909999994" blue="0.38073024719999998" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="view" destination="64e-ug-cwt" id="SgG-4M-a0h"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PaS-iA-MwJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="663" y="-535"/>
+            <point key="canvasLocation" x="1191" y="-1026"/>
         </scene>
         <!--Drawing View Controller-->
         <scene sceneID="yDk-gb-r2X">
@@ -184,7 +210,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="clock_background.png" width="320" height="334"/>
+        <image name="hoursHand.png" width="25" height="140"/>
+        <image name="minutesHand.png" width="25" height="140"/>
+        <image name="pendulum.png" width="101" height="363"/>
         <image name="purple.png" width="100" height="43"/>
+        <image name="secondsHand.png" width="25" height="140"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
